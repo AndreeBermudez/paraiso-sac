@@ -134,7 +134,7 @@ public class FacturacionControlador implements Initializable {
     @FXML
     private TextField txtRUC;
     @FXML
-    private TextField txtPlacaBus;
+    private TextField txtChofer;
 
 
     @Override
@@ -247,7 +247,7 @@ public class FacturacionControlador implements Initializable {
                     txtFechaSalida.setText(asignacionSeleccionada.getFechaSalida().toString());
                     txtHoraSalida.setText(asignacionSeleccionada.getHoraSalida().toString());
                     txtNumAsiento.setText(String.valueOf(numeroAsiento));
-                    txtPlacaBus.setText(asignacionSeleccionada.getBusAsignado().getPlaca());
+                    txtChofer.setText(asignacionSeleccionada.getChoferAsignado().getNombre()+" "+asignacionSeleccionada.getChoferAsignado().getApellido());
 
                     idAsiento = asiento.getIdAsiento();
                     asignacionAux = asignacionSeleccionada;
@@ -264,7 +264,7 @@ public class FacturacionControlador implements Initializable {
                     txtFechaSalida.clear();
                     txtHoraSalida.clear();
                     txtNumAsiento.clear();
-                    txtPlacaBus.clear();
+                    txtChofer.clear();
                     txtDni.clear();
                     txtTelefono.clear();
                     txtDireccion.clear();

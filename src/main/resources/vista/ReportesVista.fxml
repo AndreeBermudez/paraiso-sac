@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1068.0" style="-fx-background-color: FFFFFF;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.utp.viacosta.controlador.ReporteControlador">
    <children>
-      <Label layoutX="31.0" layoutY="24.0" style="-fx-text-fill: #0066CC;" text="Reporte de Ventas">
+      <Label layoutX="31.0" layoutY="24.0" text="Reporte de Ventas">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
@@ -39,7 +39,7 @@
       </TableView>
       <TextField fx:id="txtCliente" layoutX="33.0" layoutY="120.0" onKeyReleased="#handleKeyReleasedClient" prefHeight="31.0" prefWidth="472.0" promptText="Ingrese el DNI del cliente" style="-fx-background-color: F4F4F4; -fx-border-color: ccc; -fx-border-radius: 2px;" visible="false" />
       <TextField fx:id="txtEmpleado" layoutX="33.0" layoutY="120.0" onKeyReleased="#handleKeyReleasedEmployee" prefHeight="33.0" prefWidth="472.0" promptText="Ingrese el nombre el responsable de ventas" style="-fx-background-color: F4F4F4; -fx-border-color: ccc; -fx-border-radius: 2px;" visible="false" />
-      <Button fx:id="btnFiltrar" layoutX="530.0" layoutY="120.0" mnemonicParsing="false" onAction="#filterForDate" prefHeight="33.0" prefWidth="108.0" style="-fx-background-color: #0066CC;" styleClass="btn-export" text="Filtrar" />
-      <Button layoutX="529.0" layoutY="72.0" mnemonicParsing="false" onAction="#limpiarReportes" prefHeight="33.0" prefWidth="108.0" style="-fx-background-color: #0066CC;" styleClass="btn-export" text="Limpiar" />
+      <Button fx:id="btnFiltrar" layoutX="530.0" layoutY="120.0" mnemonicParsing="false" onAction="#filterForDate" prefHeight="33.0" prefWidth="108.0" style="-fx-background-color: F79022;" styleClass="btn-export" text="Filtrar" />
+      <Button layoutX="529.0" layoutY="72.0" mnemonicParsing="false" onAction="#limpiarReportes" prefHeight="33.0" prefWidth="108.0" style="-fx-background-color: F79022;" styleClass="btn-export" text="Limpiar" />
    </children>
 </AnchorPane>

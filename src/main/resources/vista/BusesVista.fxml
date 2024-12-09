@@ -38,7 +38,7 @@
                     <font>
                         <Font name="System Bold" size="12.0" />
                     </font></Label>
-                <Label layoutX="25.0" layoutY="14.0" style="-fx-text-fill: #0066CC;" text="Registre nuevo Bus">
+                <Label layoutX="25.0" layoutY="14.0" prefHeight="30.0" prefWidth="199.0" text="Registrar nuevo Bus">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
@@ -49,9 +49,9 @@
             <TextField fx:id="txtPiso2" layoutX="25.0" layoutY="329.0" minHeight="30.0" minWidth="188.0" prefHeight="30.0" prefWidth="188.0" promptText="Ejem. 20" stylesheets="@../css/style.css" />
             <TextField fx:id="txtPiso1" layoutX="25.0" layoutY="269.0" minHeight="30.0" minWidth="188.0" prefHeight="30.0" prefWidth="188.0" promptText="Ejem. 10" stylesheets="@../css/style.css" />
             <TextField fx:id="txt_carga_maxima" layoutX="25.0" layoutY="393.0" minHeight="30.0" minWidth="188.0" prefHeight="30.0" prefWidth="188.0" promptText="Ejem. 2000.00" stylesheets="@../css/style.css" />
-            <Button fx:id="btn_guardar" layoutX="24.0" layoutY="441.0" mnemonicParsing="false" onAction="#actGuardar" prefHeight="27.0" prefWidth="188.0" styleClass="btn-clasic" stylesheets="@../css/style.css" text="Guardar" />
-            <Button fx:id="btn_actualizar" layoutX="24.0" layoutY="483.0" mnemonicParsing="false" onAction="#actActualizar" prefHeight="27.0" prefWidth="188.0" styleClass="btn-clasic" stylesheets="@../css/style.css" text="Actualizar" />
-            <Button fx:id="btn_eliminar" layoutX="23.0" layoutY="526.0" mnemonicParsing="false" onAction="#actEliminar" prefHeight="27.0" prefWidth="188.0" styleClass="btn-clasic" stylesheets="@../css/style.css" text="Eliminar" />
+            <Button fx:id="btn_guardar" layoutX="24.0" layoutY="441.0" mnemonicParsing="false" onAction="#actGuardar" prefHeight="30.0" prefWidth="188.0" style="-fx-background-color: F79022;" styleClass="btn-clasic" stylesheets="@../css/style.css" text="Guardar" />
+            <Button fx:id="btn_actualizar" layoutX="24.0" layoutY="483.0" mnemonicParsing="false" onAction="#actActualizar" prefHeight="30.0" prefWidth="188.0" style="-fx-background-color: F79022;" styleClass="btn-clasic" stylesheets="@../css/style.css" text="Actualizar" />
+            <Button fx:id="btn_eliminar" layoutX="23.0" layoutY="526.0" mnemonicParsing="false" onAction="#actEliminar" prefHeight="30.0" prefWidth="188.0" style="-fx-background-color: F79022;" styleClass="btn-clasic" stylesheets="@../css/style.css" text="Eliminar" />
             <TableView fx:id="tablaBuses" layoutX="251.0" layoutY="20.0" prefHeight="656.0" prefWidth="773.0" style="-fx-border-color: CCC;">
                <columns>
                   <TableColumn fx:id="columnId" prefWidth="39.999969482421875" text="ID" />

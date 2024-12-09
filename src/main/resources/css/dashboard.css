@@ -1,7 +1,7 @@
 /*  DASBOARD */
 
 #paneEmpleados, #paneBuses, #paneRutas, #paneClientes {
-    -fx-background-color: #0066CC;
+    -fx-background-color: #f79022;
     -fx-border-radius: 10px;
     -fx-background-radius: 10px;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.0, 4, 4);

@@ -62,7 +62,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Button fx:id="btnGuardar" layoutX="28.0" layoutY="361.0" mnemonicParsing="false" onAction="#btnGuardar" prefHeight="25.0" prefWidth="146.0" styleClass="btn-clasic" stylesheets="@../css/style.css" text="Guardar" />
+            <Button fx:id="btnGuardar" layoutX="28.0" layoutY="361.0" mnemonicParsing="false" onAction="#btnGuardar" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: F79022;" styleClass="btn-clasic" stylesheets="@../css/style.css" text="Guardar" />
             <TableView fx:id="tablaEmpresa" layoutX="28.0" layoutY="429.0" prefHeight="243.0" prefWidth="992.0">
               <columns>
                 <TableColumn fx:id="columnNombre" prefWidth="166.0" text="NOMBRE" />
@@ -74,8 +74,8 @@
                   <TableColumn fx:id="columnPais" prefWidth="87.0" text="PAIS" />
               </columns>
             </TableView>
-            <Button fx:id="btnEditar" layoutX="189.0" layoutY="361.0" mnemonicParsing="false" onAction="#btnActualizar" prefHeight="25.0" prefWidth="146.0" styleClass="btn-clasic" stylesheets="@../css/style.css" text="Editar" />
-            <Label layoutX="24.0" layoutY="22.0" prefHeight="30.0" prefWidth="281.0" style="-fx-text-fill: #0066CC;" text="Configuración de la Empresa">
+            <Button fx:id="btnEditar" layoutX="189.0" layoutY="361.0" mnemonicParsing="false" onAction="#btnActualizar" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: F79022;" styleClass="btn-clasic" stylesheets="@../css/style.css" text="Editar" />
+            <Label layoutX="24.0" layoutY="22.0" prefHeight="30.0" prefWidth="281.0" text="Configuración de la Empresa">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>

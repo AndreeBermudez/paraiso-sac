@@ -2,9 +2,11 @@ package com.utp.viacosta.controlador;
 
 import com.utp.viacosta.modelo.AsignacionBusRutaModelo;
 import com.utp.viacosta.modelo.BusModelo;
+import com.utp.viacosta.modelo.ChoferModelo;
 import com.utp.viacosta.modelo.RutaModelo;
 import com.utp.viacosta.servicio.AsignacionBusRutaServicio;
 import com.utp.viacosta.servicio.BusServicio;
+import com.utp.viacosta.servicio.ChoferServicio;
 import com.utp.viacosta.servicio.RutaServicio;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,6 +31,8 @@ public class AsignacionBusRuta implements Initializable {
     private BusServicio busServicio;
     @Autowired
     private RutaServicio rutaServicio;
+    @Autowired
+    private ChoferServicio choferServicio;
 
 
     @FXML
@@ -44,8 +48,6 @@ public class AsignacionBusRuta implements Initializable {
     private TextField txtHoraSalida;
 
     @FXML
-    private TableColumn<AsignacionBusRutaModelo, String> columnId;
-    @FXML
     private TableColumn<AsignacionBusRutaModelo, String> columnRuta;
     @FXML
     private TableColumn<AsignacionBusRutaModelo, String> columnBus;
@@ -59,12 +61,17 @@ public class AsignacionBusRuta implements Initializable {
     private TextField txtPrecio;
     @FXML
     private TableColumn<AsignacionBusRutaModelo, String> columnPrecio;
+    @FXML
+    private TableColumn<ChoferModelo,String> columnChofer;
+    @FXML
+    private ComboBox<ChoferModelo> cmbChofer;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         listarAsignaciones();
         cargarBuses();
+        cargarChoferes();
         cargarRutas();
     }
 
@@ -73,6 +80,7 @@ public class AsignacionBusRuta implements Initializable {
         AsignacionBusRutaModelo asignacionBusRutaModelo = new AsignacionBusRutaModelo();
         asignacionBusRutaModelo.setIdBus(cmbBus.getValue().getIdBus());
         asignacionBusRutaModelo.setIdRuta(cmbRuta.getValue().getIdRuta());
+        asignacionBusRutaModelo.setChoferAsignado(cmbChofer.getValue());
         asignacionBusRutaModelo.setFechaSalida(fechaHoraSalida.getValue());
         asignacionBusRutaModelo.setHoraSalida(LocalTime.parse(txtHoraSalida.getText()));
         asignacionBusRutaModelo.setPrecio(Double.parseDouble(txtPrecio.getText()));
@@ -92,6 +100,11 @@ public class AsignacionBusRuta implements Initializable {
         cmbRuta.getItems().setAll(rutaServicio.listarRutas());
     }
 
+    //cargando los choferes en el combobox
+    public void cargarChoferes(){
+        cmbChofer.getItems().setAll(choferServicio.findAll());
+    }
+
     //idBus, IdRuta
     public void bus() {
         List<AsignacionBusRutaModelo> asignacionBusRutaModelo = asignacionBusRutaService.findAll();
@@ -101,9 +114,9 @@ public class AsignacionBusRuta implements Initializable {
 
     //llenando la tabla con los datos de la base de datos
     public void listarAsignaciones(){
-        columnId.setCellValueFactory(new PropertyValueFactory<>("idAsignacion"));
         columnRuta.setCellValueFactory(new PropertyValueFactory<>("rutaAsignada"));
         columnBus.setCellValueFactory(new PropertyValueFactory<>("busAsignado"));
+        columnChofer.setCellValueFactory(new PropertyValueFactory<>("choferAsignado"));
         columnFechaSalida.setCellValueFactory(new PropertyValueFactory<>("fechaSalida"));
         columnHoraSalida.setCellValueFactory(new PropertyValueFactory<>("horaSalida"));
         columnPrecio.setCellValueFactory(new PropertyValueFactory<>("precio"));
@@ -116,6 +129,7 @@ public class AsignacionBusRuta implements Initializable {
         AsignacionBusRutaModelo asignacionBusRutaModelo = tablaBusesRutas.getSelectionModel().getSelectedItem();
         asignacionBusRutaModelo.setIdBus(cmbBus.getValue().getIdBus());
         asignacionBusRutaModelo.setIdRuta(cmbRuta.getValue().getIdRuta());
+        asignacionBusRutaModelo.setChoferAsignado(cmbChofer.getValue());
         asignacionBusRutaModelo.setFechaSalida(fechaHoraSalida.getValue());
         asignacionBusRutaModelo.setHoraSalida(LocalTime.parse(txtHoraSalida.getText()));
 

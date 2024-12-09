@@ -38,4 +38,9 @@ public class EmpleadoServicioImpl implements EmpleadoServicio {
         } throw new IllegalArgumentException("Credeciales incorrectas");
     }
 
+    @Override
+    public EmpleadoModelo findByDni(String dni) {
+        return empleadoDAO.findByDni(dni);
+    }
+
 }

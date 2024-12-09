@@ -3,12 +3,13 @@ package com.utp.viacosta.controlador;
 import com.utp.viacosta.agregates.respuesta.ReniecRespuesta;
 import com.utp.viacosta.agregates.retrofit.ReniecService;
 import com.utp.viacosta.agregates.retrofit.api.ReniecCliente;
-import com.utp.viacosta.modelo.EmpleadoModelo;
-import com.utp.viacosta.modelo.RolModelo;
-import com.utp.viacosta.modelo.SedeModelo;
+import com.utp.viacosta.modelo.*;
 import com.utp.viacosta.servicio.EmpleadoServicio;
 import com.utp.viacosta.servicio.RolServicio;
 import com.utp.viacosta.servicio.SedeServicio;
+import com.utp.viacosta.util.FxmlCargarUtil;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -25,8 +26,10 @@ import retrofit2.Retrofit;
 
 import java.net.URL;
 import java.util.HashSet;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Component
 public class EmpleadoControlador implements Initializable {
@@ -72,6 +75,7 @@ public class EmpleadoControlador implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         listarEmpleados();
         cargarRoles();
+        cargarSedes();
 
         // Listener para detectar la selección en la tabla y cargar los datos en los campos
         tabla_empleados.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
@@ -155,7 +159,16 @@ public class EmpleadoControlador implements Initializable {
     }
 
     private void cargarSedes() {
-        cmbSede.getItems().setAll(sedeServicio.listaSedes());
+        List<SedeModelo> sedes = sedeServicio.listaSedes();
+        Set<String> uniqueCities = sedes.stream()
+                .map(SedeModelo::getCiudad)
+                .collect(Collectors.toSet());
+        ObservableList<SedeModelo> uniqueSedes = FXCollections.observableArrayList(
+                sedes.stream()
+                        .filter(sede -> uniqueCities.remove(sede.getCiudad()))
+                        .collect(Collectors.toList())
+        );
+        cmbSede.setItems(uniqueSedes);
     }
 
     @FXML

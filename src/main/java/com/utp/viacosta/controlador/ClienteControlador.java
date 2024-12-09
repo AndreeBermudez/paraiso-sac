@@ -3,6 +3,7 @@ package com.utp.viacosta.controlador;
 import com.utp.viacosta.agregates.respuesta.ReniecRespuesta;
 import com.utp.viacosta.agregates.retrofit.ReniecService;
 import com.utp.viacosta.agregates.retrofit.api.ReniecCliente;
+import com.utp.viacosta.modelo.ChoferModelo;
 import com.utp.viacosta.modelo.ClienteModelo;
 import com.utp.viacosta.servicio.ClienteServicio;
 import javafx.event.ActionEvent;
@@ -38,8 +39,6 @@ public class ClienteControlador implements Initializable {
     @FXML
     private TableColumn<ClienteModelo, String> columnApellido;
     @FXML
-    private TableColumn<ClienteModelo, String> columnCorreo;
-    @FXML
     private TableColumn<ClienteModelo, String> columnDni;
     @FXML
     private TableColumn<ClienteModelo, String> columnId;
@@ -49,9 +48,18 @@ public class ClienteControlador implements Initializable {
     private TableColumn<ClienteModelo, String> columnTelefono;
     @FXML
     private TableView<ClienteModelo> tabla_clientes;
-
     @FXML
-    private TextField txt_apellido, txt_correo, txt_nombre, txt_telefono, txt_dni;
+    private TextField txt_apellido;
+    @FXML
+    private TextField txt_telefono;
+    @FXML
+    private TextField txt_nombre;
+    @FXML
+    private TextField txt_dni;
+    @FXML
+    private TextField txt_direccion;
+    @FXML
+    private TableColumn<ClienteModelo, String> columnDireccion;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -82,7 +90,7 @@ public class ClienteControlador implements Initializable {
         clienteModelo.setApellido(txt_apellido.getText());
         clienteModelo.setDni(txt_dni.getText());
         clienteModelo.setTelefono(txt_telefono.getText());
-        clienteModelo.setDireccion("Direccion de prueba");
+        clienteModelo.setDireccion(txt_direccion.getText());
 
         clienteServicio.save(clienteModelo);
         listarClientes();
@@ -95,7 +103,7 @@ public class ClienteControlador implements Initializable {
         columnNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         columnApellido.setCellValueFactory(new PropertyValueFactory<>("apellido"));
         columnDni.setCellValueFactory(new PropertyValueFactory<>("dni"));
-        columnCorreo.setCellValueFactory(new PropertyValueFactory<>("correo"));
+        columnDireccion.setCellValueFactory(new PropertyValueFactory<>("direccion"));
         columnTelefono.setCellValueFactory(new PropertyValueFactory<>("telefono"));
 
         //configurar la columna de acciones
@@ -113,14 +121,15 @@ public class ClienteControlador implements Initializable {
         clienteModelo.setNombre(txt_nombre.getText());
         clienteModelo.setApellido(txt_apellido.getText());
         clienteModelo.setDni(txt_dni.getText());
-        clienteModelo.setCorreo(txt_correo.getText());
         clienteModelo.setTelefono(txt_telefono.getText());
+        clienteModelo.setDireccion(txt_direccion.getText());
 
         clienteServicio.actualizarCliente(clienteModelo);
         listarClientes();
         limpiar();
         limpiarStyles();
     }
+
     @FXML
     public void actLimpiar(ActionEvent event) {
         limpiar();
@@ -136,8 +145,8 @@ public class ClienteControlador implements Initializable {
         txt_nombre.setText("");
         txt_apellido.setText("");
         txt_dni.setText("");
-        txt_correo.setText("");
         txt_telefono.setText("");
+        txt_direccion.setText("");
     }
 
     @FXML
@@ -146,7 +155,7 @@ public class ClienteControlador implements Initializable {
         txt_nombre.setText(clienteModelo.getNombre());
         txt_apellido.setText(clienteModelo.getApellido());
         txt_dni.setText(clienteModelo.getDni());
-        txt_correo.setText(clienteModelo.getCorreo());
+        txt_direccion.setText(clienteModelo.getDireccion());
         txt_telefono.setText(clienteModelo.getTelefono());
     }
 
@@ -181,18 +190,17 @@ public class ClienteControlador implements Initializable {
         return true;
     }
 
-    private boolean validarCorreo() {
-        String correo = txt_correo.getText();
-        if ( !correo.isEmpty() && !correo.matches("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$")) {
-            txt_correo.setStyle("-fx-border-color: red");
-            mostrarAlerta("Ingrese un correo valido");
+    private boolean validarDireccion() {
+        if (txt_direccion.getText().isEmpty()) {
+            mostrarAlerta("La direccion no puede estar vacia.");
             return false;
         }
         return true;
     }
 
+
     private boolean validarEntradas() {
-        return validarDni() && validarNombre() && validarApellido() && validarCorreo();
+        return validarDni() && validarNombre() && validarApellido() && validarDireccion();
     }
 
     private void mostrarAlerta(String mensaje) {
@@ -205,7 +213,7 @@ public class ClienteControlador implements Initializable {
         txt_nombre.setStyle("");
         txt_apellido.setStyle("");
         txt_dni.setStyle("");
-        txt_correo.setStyle("");
+        txt_direccion.setStyle("");
         txt_telefono.setStyle("");
     }
 

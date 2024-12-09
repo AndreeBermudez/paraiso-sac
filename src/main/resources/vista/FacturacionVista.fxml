@@ -20,7 +20,7 @@
          <children>
             <Pane layoutX="11.0" layoutY="14.0" prefHeight="130.0" prefWidth="1046.0" style="-fx-border-color: CCC;">
                <children>
-                  <Label layoutX="24.0" layoutY="14.0" style="-fx-text-fill: #0066CC;" text="Selección de Ruta">
+                  <Label layoutX="24.0" layoutY="14.0" text="Selección de Ruta">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
@@ -54,7 +54,7 @@
             <Button fx:id="irAPago" layoutX="859.0" layoutY="675.0" mnemonicParsing="false" onAction="#irAPago" prefHeight="31.0" prefWidth="198.0" styleClass="btn-clasic" stylesheets="@../css/style.css" text="Continuar Venta" />
             <Pane layoutX="14.0" layoutY="155.0" prefHeight="512.0" prefWidth="249.0" style="-fx-border-color: CCC;">
                <children>
-                  <Label layoutX="14.0" layoutY="14.0" style="-fx-text-fill: #0066CC;" text="Lista de buses">
+                  <Label layoutX="14.0" layoutY="14.0" text="Lista de buses">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
@@ -82,7 +82,7 @@
             </Pane>
             <Pane layoutX="276.0" layoutY="155.0" prefHeight="512.0" prefWidth="781.0" style="-fx-border-color: CCC;">
                <children>
-                  <GridPane fx:id="gridSegundoPiso" layoutX="96.0" layoutY="68.0" prefHeight="201.0" prefWidth="685.0" style="-fx-border-color: #cce6ff; -fx-border-radius: 10px; -fx-background-color: #e1eefc; -fx-background-radius: 10px;" stylesheets="@../css/style.css">
+                  <GridPane fx:id="gridSegundoPiso" layoutX="96.0" layoutY="68.0" prefHeight="201.0" prefWidth="685.0" style="-fx-border-radius: 10px; -fx-background-color: ffe68f; -fx-background-radius: 10px;" stylesheets="@../css/style.css">
 
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -103,12 +103,12 @@
                         <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                   </GridPane>
-                  <Label layoutX="14.0" layoutY="14.0" style="-fx-text-fill: #0066CC;" text="Lista de Asientos">
+                  <Label layoutX="14.0" layoutY="14.0" text="Lista de Asientos">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Button layoutX="215.0" layoutY="14.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="42.0" styleClass="btn-clasic" stylesheets="@../css/style.css" />
+                  <Button layoutX="215.0" layoutY="14.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="42.0" style="-fx-background-color: F79022;" styleClass="btn-clasic" stylesheets="@../css/style.css" />
                   <Button layoutX="364.0" layoutY="14.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="42.0" style="-fx-background-color: red;" stylesheets="@../css/style.css" />
                   <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="220.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" smooth="false">
                      <image>
@@ -130,17 +130,17 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="24.0" layoutY="385.0" style="-fx-text-fill: #0066CC;" text="PISO 1">
+                  <Label layoutX="24.0" layoutY="385.0" text="PISO 1">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="24.0" layoutY="157.0" style="-fx-text-fill: #0066CC;" text="PISO 2">
+                  <Label layoutX="24.0" layoutY="157.0" text="PISO 2">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Label>
-                  <GridPane fx:id="gridPrimerPiso" layoutX="96.0" layoutY="293.0" prefHeight="201.0" prefWidth="685.0" style="-fx-border-color: #cce6ff; -fx-border-radius: 10px; -fx-background-color: #e1eefc; -fx-background-radius: 10px;" stylesheets="@../css/style.css">
+                  <GridPane fx:id="gridPrimerPiso" layoutX="96.0" layoutY="293.0" prefHeight="201.0" prefWidth="685.0" style="-fx-border-radius: 10px; -fx-background-color: ffe68f; -fx-background-radius: 10px;" stylesheets="@../css/style.css">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -190,7 +190,7 @@
                      </font>
                   </Label>
                   <TextField fx:id="embarque" editable="false" layoutX="775.0" layoutY="65.0" minHeight="30.0" prefHeight="30.0" prefWidth="249.0" />
-                  <Label layoutX="26.0" layoutY="14.0" style="-fx-text-fill: #0066CC;" text="Datos principales">
+                  <Label layoutX="26.0" layoutY="14.0" text="Datos principales">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
@@ -201,7 +201,7 @@
             </Pane>
             <Pane layoutX="829.0" layoutY="146.0" prefHeight="498.0" prefWidth="225.0" style="-fx-border-color: CCC;">
                <children>
-                  <Label layoutX="15.0" layoutY="14.0" style="-fx-text-fill: #0066CC;" text="Datos del viaje">
+                  <Label layoutX="15.0" layoutY="14.0" text="Datos del viaje">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
@@ -236,17 +236,17 @@
                      </font>
                   </Label>
                   <TextField fx:id="txtNumAsiento" editable="false" layoutX="20.0" layoutY="350.0" minHeight="30.0" prefHeight="30.0" prefWidth="196.0" />
-                  <Label layoutX="20.0" layoutY="398.0" text="Placa del bus:">
+                  <Label layoutX="20.0" layoutY="398.0" text="Chofer:">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtPlacaBus" editable="false" layoutX="21.0" layoutY="424.0" minHeight="30.0" prefHeight="30.0" prefWidth="196.0" />
+                  <TextField fx:id="txtChofer" editable="false" layoutX="21.0" layoutY="424.0" minHeight="30.0" prefHeight="30.0" prefWidth="196.0" />
                </children>
             </Pane>
             <Pane layoutX="13.0" layoutY="146.0" prefHeight="280.0" prefWidth="808.0" style="-fx-border-color: CCC;">
                <children>
-                  <Label layoutX="24.0" layoutY="14.0" style="-fx-text-fill: #0066CC;" text="Registro del Pasajero">
+                  <Label layoutX="24.0" layoutY="14.0" text="Registro del Pasajero">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
@@ -302,7 +302,7 @@
             </Pane>
             <Pane layoutX="13.0" layoutY="435.0" prefHeight="207.0" prefWidth="808.0" style="-fx-border-color: CCC;">
                <children>
-                  <Label layoutX="24.0" layoutY="14.0" style="-fx-text-fill: #0066CC;" text="Facturación">
+                  <Label layoutX="24.0" layoutY="14.0" text="Facturación">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>

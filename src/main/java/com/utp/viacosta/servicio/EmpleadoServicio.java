@@ -9,4 +9,5 @@ public interface EmpleadoServicio {
     EmpleadoModelo findByCorreo(String usuario);
     EmpleadoModelo save(EmpleadoModelo empleado);
     EmpleadoModelo autenticar(String correo, String password);
+    EmpleadoModelo findByDni(String dni);
 }

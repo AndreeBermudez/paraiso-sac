@@ -36,6 +36,9 @@ public class AsignacionBusRutaModelo {
     @ManyToOne
     @JoinColumn(name = "id_ruta", insertable = false, updatable = false)
     private RutaModelo rutaAsignada;
+    @ManyToOne
+    @JoinColumn(name = "id_chofer")
+    private ChoferModelo choferAsignado;
     @OneToMany(mappedBy = "asignacionBusRuta")
     private List<DetalleBoletaModelo> detalleBoletaModelo;
     @OneToMany(mappedBy = "asignacionBusRuta")

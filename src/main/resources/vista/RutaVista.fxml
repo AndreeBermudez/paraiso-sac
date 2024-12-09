@@ -30,7 +30,7 @@
             <TextField fx:id="txt_origen" layoutX="24.0" layoutY="103.0" minHeight="30.0" minWidth="188.0" prefHeight="30.0" prefWidth="188.0" promptText="ingresa el origen" />
             <Button fx:id="btn_agregar" layoutX="24.0" layoutY="282.0" mnemonicParsing="false" onAction="#act_guardar" prefHeight="31.0" prefWidth="188.0" styleClass="btn-clasic" stylesheets="@../css/style.css" text="Agregar" />
             <Button fx:id="btn_actualizar" layoutX="24.0" layoutY="282.0" mnemonicParsing="false" onAction="#act_actualizar" prefHeight="31.0" prefWidth="188.0" styleClass="btn-clasic" stylesheets="@../css/style.css" text="Actualizar" />
-            <Label layoutX="24.0" layoutY="17.0" style="-fx-text-fill: #0066CC;" text="Registrar Nueva Ruta">
+            <Label layoutX="24.0" layoutY="17.0" text="Registrar Nueva Ruta">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>

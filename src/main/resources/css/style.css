@@ -9,7 +9,7 @@
 }
 
 .input-login:focused {
-    -fx-border-color: #007bff;
+    -fx-border-color: #F8B435;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 123, 255, 0.5), 5, 0, 0, 0);
 }
 
@@ -28,49 +28,49 @@
 }
 
 .btn-login:pressed {
-    -fx-background-color: #0d1623;
+    -fx-background-color: #ad7200;
 }
 
 .btn-login:focused {
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 123, 255, 0.5), 10, 0, 0, 0);
+    -fx-effect: dropshadow(three-pass-box, rgb(248, 180, 53), 10, 0, 0, 0);
 }
 
 /*PRINCIPAL*/
 #contentLogo {
-    -fx-background-color: #87ceeb;
+    -fx-background-color: #F1F1F1;
 }
 
 #asidePanel {
-    -fx-background-color: #f0f8ff;
+    -fx-background-color: #F1F1F1;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 2, 0);
 }
 
 .btnAside {
-    -fx-background-color: #ffffff;
+    -fx-background-color: #F1F1F1;
     -fx-border: none;
-    -fx-text-fill: #1e90ff;
+    -fx-text-fill: #000000;
     -fx-font-weight: bold;
 }
 
 .btnAside:hover {
-    -fx-background-color: #0277bd;
+    -fx-background-color: #F79022;
     -fx-text-fill: #ffffff;
 }
 
 .btnAside:pressed, .btnAside:focused {
-    -fx-background-color: #0b4c85;
+    -fx-background-color: #F79022;
     -fx-text-fill: #ffffff;
 }
 
 /*FACTURACION*/
 .table-view {
     -fx-background-color: white;
-    -fx-border-color: #E6F3FF;
+    -fx-border-color: #fae8db;
     -fx-border-width: 1;
 }
 
 .table-view .column-header-background {
-    -fx-background-color: #E6F3FF;
+    -fx-background-color: #e7e5e5;
 }
 
 .table-view .column-header, .table-view .filler {
@@ -80,7 +80,7 @@
 }
 
 .table-view .column-header .label {
-    -fx-text-fill: #0066CC;
+    -fx-text-fill: #000000;
     -fx-font-weight: bold;
 }
 
@@ -91,11 +91,11 @@
 }
 
 .table-row-cell:odd {
-    -fx-background-color: #F8FBFF;
+    -fx-background-color: #f5f5f5;
 }
 
 .table-row-cell:selected {
-    -fx-background-color: #547fe8; /* Cambia el color de fondo al seleccionar */
+    -fx-background-color: #f68812; /* Cambia el color de fondo al seleccionar */
     -fx-text-fill: #000000; /* Cambia el color del texto a negro */
 }
 
@@ -136,23 +136,23 @@
 }
 
 .btn-export:hover {
-    -fx-background-color: #0066CC;
+    -fx-background-color: #ffa600;
 }
 
 .btn-clasic {
-    -fx-background-color: #0066CC;
+    -fx-background-color: #F79022;
     -fx-background-radius: 4px;
     -fx-border: none;
-    -fx-text-fill: white;
+    -fx-text-fill: #ffffff;
     -fx-font-weight: bold;
     -fx-border-width: 1px;
     -fx-border-insets: -1px;
 }
 
 .asiento-disponible {
-    -fx-background-color: #0066CC;
+    -fx-background-color: #F79022;
     -fx-background-radius: 4px;
-    -fx-border: #0066CC;
+    -fx-border: #F79022;
     -fx-text-fill: #ffffff;
     -fx-font-weight: bold;
     -fx-padding: 0px;
@@ -170,7 +170,7 @@
 }
 
 .boton-itinerario{
-    -fx-background-color: #0066CC;
+    -fx-background-color: #F79022;
     -fx-background-radius: 4px;
     -fx-border: none;
     -fx-text-fill: white;
@@ -180,12 +180,12 @@
 }
 
 .boton-itinerario-active{
-    -fx-background-color: #002559;
+    -fx-background-color: #935e00;
 
 }
 
 .boton-itinerario:hover {
-    -fx-background-color: #002559;
+    -fx-background-color: #a26900;
 }
 
 .boton-itinerario-disabled{

@@ -47,9 +47,7 @@ public class VentanaPrincipalControlador implements Initializable {
     @FXML
     private Button btn_clientes, btn_empleados, btn_facturacion, btn_buses, btn_asiento, btn_buses_rutas;
     @FXML
-    private VBox vBox;
-    @FXML
-    private Button btn_monitoreo;
+    private Button btn_choferes;
 
 
     @Override
@@ -76,7 +74,7 @@ public class VentanaPrincipalControlador implements Initializable {
                     .collect(Collectors.toSet());
             btn_inicio.setVisible(roles.contains("ADMINISTRADOR") || roles.contains("VENTAS"));
             btn_clientes.setVisible(roles.contains("ADMINISTRADOR") || roles.contains("VENTAS"));
-            btn_monitoreo.setVisible(roles.contains("ADMINISTRADOR") || roles.contains("VENTAS"));
+            btn_choferes.setVisible(roles.contains("ADMINISTRADOR") || roles.contains("VENTAS"));
             btn_empleados.setVisible(roles.contains("ADMINISTRADOR"));
             btn_buses.setVisible(roles.contains("ADMINISTRADOR"));
             //btn_asiento.setVisible(roles.contains("ADMINISTRADOR"));
@@ -152,9 +150,9 @@ public class VentanaPrincipalControlador implements Initializable {
     }
 
     @FXML
-    public void btn_monitoreo(ActionEvent actionEvent) {
+    public void btn_choferes(ActionEvent actionEvent) {
         try {
-            Parent vista = FxmlCargarUtil.load("/vista/MonitoreoBuses.fxml");
+            Parent vista = FxmlCargarUtil.load("/vista/ChoferVista.fxml");
             ventanaPrincipal.setCenter(vista);
         } catch (IOException e) {
             e.printStackTrace();
@@ -248,8 +246,8 @@ public class VentanaPrincipalControlador implements Initializable {
                 vista = FxmlCargarUtil.load("/vista/ReportesVista.fxml");
             } else if (source == btn_config) {
                 vista = FxmlCargarUtil.load("/vista/SedeVista.fxml");
-            } else if (source == btn_monitoreo) {
-                vista = FxmlCargarUtil.load("/vista/MonitoreoBuses.fxml");
+            } else if (source == btn_choferes) {
+                vista = FxmlCargarUtil.load("/vista/ChoferVista.fxml");
             } else if (source == btn_logout) {
                 cerrarSesion(event);
             }
@@ -264,7 +262,6 @@ public class VentanaPrincipalControlador implements Initializable {
     public void manejarBoton() {
         btn_inicio.setOnAction(this::handleButtonAction);
         btn_clientes.setOnAction(this::handleButtonAction);
-        btn_monitoreo.setOnAction(this::handleButtonAction);
         btn_empleados.setOnAction(this::handleButtonAction);
         btn_rutas.setOnAction(this::handleButtonAction);
         btn_facturacion.setOnAction(this::handleButtonAction);
@@ -275,5 +272,4 @@ public class VentanaPrincipalControlador implements Initializable {
             deslizarMenu(primerSubVBox, listaSubMenuPrimer);
         });
     }
-
 }

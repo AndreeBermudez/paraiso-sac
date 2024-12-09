@@ -14,23 +14,24 @@
    <children>
       <Pane layoutX="428.0" prefHeight="571.0" prefWidth="427.0" style="-fx-background-color: white;">
          <children>
-            <Button fx:id="btn_ingresar" layoutX="133.0" layoutY="381.0" onAction="#Login" prefHeight="45.0" prefWidth="187.0" style="-fx-background-color: #0277BD;" text="Iniciar Sesión" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btn_ingresar" layoutX="133.0" layoutY="381.0" onAction="#Login" prefHeight="45.0" prefWidth="187.0" style="-fx-background-color: F79022;" text="Iniciar Sesión" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <FontAwesomeIconView fill="#0277bd" glyphName="LOCK" layoutX="61.0" layoutY="312.0" size="20" />
-            <FontAwesomeIconView fill="#0277bd" glyphName="USER" layoutX="59.0" layoutY="241.0" size="20" wrappingWidth="15.714285850524902" />
-            <TextField fx:id="txt_correo" layoutX="82.0" layoutY="218.0" prefHeight="31.0" prefWidth="290.0" promptText="Correo Electrónico" style="-fx-background-color: white; -fx-border-width: 0 0 1 0; -fx-border-color: #007cbf;" />
-            <PasswordField fx:id="txt_password" layoutX="82.0" layoutY="290.0" prefHeight="31.0" prefWidth="290.0" promptText="Password" style="-fx-background-color: white; -fx-border-width: 0 0 1 0; -fx-border-color: #007cbf;" />
+            <FontAwesomeIconView fill="#f79022" glyphName="LOCK" layoutX="61.0" layoutY="312.0" size="20" />
+            <FontAwesomeIconView fill="#f79022" glyphName="USER" layoutX="59.0" layoutY="241.0" size="20" wrappingWidth="15.714285850524902" />
+            <TextField fx:id="txt_correo" layoutX="82.0" layoutY="218.0" prefHeight="31.0" prefWidth="290.0" promptText="Correo Electrónico" style="-fx-background-color: white; -fx-border-width: 0 0 1 0; -fx-border-color: F79022;" />
+            <PasswordField fx:id="txt_password" layoutX="82.0" layoutY="290.0" prefHeight="31.0" prefWidth="290.0" promptText="Password" style="-fx-background-color: white; -fx-border-width: 0 0 1 0; -fx-border-color: F79022;" />
          </children>
       </Pane>
-      <AnchorPane prefHeight="500.0" prefWidth="427.0" style="-fx-background-color: #cccc;">
+      <AnchorPane prefHeight="571.0" prefWidth="427.0" style="-fx-background-color: F79022;">
          <children>
-            <ImageView fitHeight="571" fitWidth="432" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="417.0" fitWidth="384.0" layoutX="14.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/login_via_costa.png" />
-               </image></ImageView>
+                  <Image url="@../img/icon-logo.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
